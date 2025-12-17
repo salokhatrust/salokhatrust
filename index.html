@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animal Planet Multiservices</title>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif; margin:0; background:#f6f8f7; color:#222;}
+    header {background:#1f7a4d; color:#fff; padding:20px; text-align:center;}
+    header h1 {margin:0; font-size:28px;}
+    header p {margin:5px 0 0;}
+    section {padding:30px 15px; max-width:1100px; margin:auto;}
+    h2 {color:#1f7a4d; margin-bottom:10px;}
+    .services ul {columns:2; -webkit-columns:2; -moz-columns:2;}
+    .services li {margin-bottom:8px;}
+    .about, .services, .form-section {background:#fff; border-radius:8px; margin-bottom:20px; box-shadow:0 2px 6px rgba(0,0,0,0.08);}    
+    .about p {line-height:1.6;}
+    form {display:grid; grid-template-columns:1fr 1fr; gap:15px;}
+    form .full {grid-column:1 / -1;}
+    label {font-weight:bold; font-size:14px;}
+    input, select, textarea {width:100%; padding:10px; border:1px solid #ccc; border-radius:5px;}
+    textarea {resize:vertical; min-height:100px;}
+    button {background:#1f7a4d; color:#fff; border:none; padding:12px; font-size:16px; border-radius:6px; cursor:pointer;}
+    button:hover {background:#155c3a;}
+    footer {background:#333; color:#fff; text-align:center; padding:15px; font-size:14px;}
+    @media(max-width:768px){form{grid-template-columns:1fr;} .services ul{columns:1;}}
+  </style>
+</head>
+<body>
+
+  <header style="display:flex; align-items:center; justify-content:center; gap:15px;">
+<img src="https://image2url.com/images/1765897998310-65ed3a9c-cb07-40ed-ab7b-6e4b744ce096.jpg" alt="Animal Planet Multiservices Logo" style="max-width:90px;" />
+<div style="text-align:left;">
+<h1 style="margin:0;">Animal Planet Multiservices</h1>
+<p style="margin:5px 0 0;"><strong>सलोखा बहुउद्देशीय सेवाभावी संस्था, छत्रपती संभाजीनगर</strong></p>
+<p style="margin:5px 0 0;"><strong>Regd.:</strong> MAH/515/2020</p>
+</div>
+</header>
+<section class="about">
+  <h2>संस्थेबद्दल / About the Trust</h2>
+  <p>
+    <strong>Animal Planet Multiservices</strong> ही नोंदणीकृत सेवाभावी संस्था असून
+    पशुसंवर्धन, दुग्ध व्यवसाय, कुक्कुटपालन, शेळी‑मेंढी पालन, मत्स्य व्यवसाय,
+    प्रशिक्षण, प्रकल्प मार्गदर्शन व शासकीय योजनांबाबत मार्गदर्शन करते.
+  </p>
+  <p>
+    शेतकरी, युवक व उद्योजकांना आधुनिक तंत्रज्ञान, प्रशिक्षण, प्रकल्प अहवाल,
+    कर्ज व मार्केटिंग मार्गदर्शन देणे हे संस्थेचे प्रमुख उद्दिष्ट आहे.
+  </p>
+</section>
+
+<section class="services">
+  <h2>आमच्या सेवा / Our Services</h2>
+  <ul>
+    <li>दुग्ध व्यवसाय प्रशिक्षण व प्रकल्प मार्गदर्शन</li>
+    <li>कुक्कुटपालन (ब्रॉयलर / लेयर / देशी)</li>
+    <li>शेळी व मेंढी पालन प्रकल्प</li>
+    <li>मत्स्य व्यवसाय व फिश फार्मिंग प्रशिक्षण</li>
+    <li>पशुवैद्यकीय व आरोग्य सल्ला</li>
+    <li>चारा, जात निवड व फार्म व्यवस्थापन</li>
+    <li>दूध, मांस, अंडी, मासे मूल्यवर्धन</li>
+    <li>NLM व राज्य शासकीय योजनांचे मार्गदर्शन</li>
+    <li>प्रकल्प अहवाल, कर्ज व मार्केटिंग सहाय्य</li>
+    <li>शेतकरी प्रशिक्षण शिबिरे व कार्यशाळा</li>
+  </ul>
+</section>
+
+<section class="form-section">
+  <h2>संस्थेत सहभागी व्हा / सेवा चौकशी फॉर्म<br>Join the Trust / Service Enquiry Form</h2>
+  <p>Please fill the form below if you want to join our trust or are interested in our services.</p>
+
+  <form onsubmit="sendWhatsApp(event)">
+    <div>
+      <label>पूर्ण नाव / Full Name</label>
+      <input id="name" type="text" required />
+    </div>
+    <div>
+      <label>मोबाईल क्रमांक / Mobile Number</label>
+      <input id="mobile" type="tel" required />
+    </div>
+    <div>
+      <label>ई‑मेल पत्ता / Email Address</label>
+      <input id="email" type="email" />
+    </div>
+    <div>
+      <label>जिल्हा / शहर / District / City</label>
+      <input id="city" type="text" />
+    </div>
+    <div>
+      <label>आवड / Interest Type</label>
+      <select id="interest">
+        <option>Join the Trust</option>
+        <option>Dairy Farming</option>
+        <option>Poultry Farming</option>
+        <option>Goat / Sheep Farming</option>
+        <option>Fish Farming</option>
+        <option>Training Program</option>
+        <option>Project & Loan Guidance</option>
+      </select>
+    </div>
+    <div class="full">
+      <label>संदेश / Message</label>
+      <textarea id="message"></textarea>
+    </div>
+    <div class="full">
+      <button type="submit">WhatsApp वर पाठवा / Submit via WhatsApp</button>
+      <p style="font-size:13px; margin-top:8px;">या फॉर्मची माहिती WhatsApp वर पाठवली जाईल</p>
+    </div>
+</form>
+
+<script>
+function sendWhatsApp(e){
+  e.preventDefault();
+  var text = `Name: ${name.value}%0AMobile: ${mobile.value}%0AEmail: ${email.value}%0ALocation: ${city.value}%0AInterest: ${interest.value}%0AMessage: ${message.value}`;
+  window.open('https://wa.me/919764999582?text=' + text, '_blank');
+}
+</script>
+</section>
+
+<footer>
+  <p>📍 ShivSena Bhavan, Shop No. 11, Aurangpura, Chhatrapati Sambhajinagar</p>
+  <p>📞 9764999582 | ✉️ salokhatrust123@gmail.com</p>
+  <p>© Animal Planet Multiservices</p>
+</footer>
+
+</body>
+</html>
