@@ -1,127 +1,1107 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Animal Planet Multiservices</title>
-  <style>
-    body {font-family: Arial, Helvetica, sans-serif; margin:0; background:#f6f8f7; color:#222;}
-    header {background:#1f7a4d; color:#fff; padding:20px; text-align:center;}
-    header h1 {margin:0; font-size:28px;}
-    header p {margin:5px 0 0;}
-    section {padding:30px 15px; max-width:1100px; margin:auto;}
-    h2 {color:#1f7a4d; margin-bottom:10px;}
-    .services ul {columns:2; -webkit-columns:2; -moz-columns:2;}
-    .services li {margin-bottom:8px;}
-    .about, .services, .form-section {background:#fff; border-radius:8px; margin-bottom:20px; box-shadow:0 2px 6px rgba(0,0,0,0.08);}    
-    .about p {line-height:1.6;}
-    form {display:grid; grid-template-columns:1fr 1fr; gap:15px;}
-    form .full {grid-column:1 / -1;}
-    label {font-weight:bold; font-size:14px;}
-    input, select, textarea {width:100%; padding:10px; border:1px solid #ccc; border-radius:5px;}
-    textarea {resize:vertical; min-height:100px;}
-    button {background:#1f7a4d; color:#fff; border:none; padding:12px; font-size:16px; border-radius:6px; cursor:pointer;}
-    button:hover {background:#155c3a;}
-    footer {background:#333; color:#fff; text-align:center; padding:15px; font-size:14px;}
-    @media(max-width:768px){form{grid-template-columns:1fr;} .services ul{columns:1;}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Animal Planet Multiservices | Salokha Trust</title>
+<meta name="description" content="Animal Planet Multiservices - Dairy, Poultry, Goat Farming, Fisheries, Rural Development and Government Scheme Guidance.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green: #174D35;
+  --green2: #26764C;
+  --dark: #102D21;
+  --gold: #E8AE43;
+  --cream: #FAF7EF;
+  --white: #FFFFFF;
+  --text: #26372D;
+  --muted: #758078;
+  --border: #E7EDE7;
+  --shadow: 0 12px 35px rgba(16,45,33,.09);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior:smooth; scroll-padding-top:85px; }
+
+body {
+  font-family:"DM Sans","Noto Sans Devanagari",sans-serif;
+  background:#fff;
+  color:var(--text);
+  line-height:1.7;
+}
+
+a { text-decoration:none; color:inherit; }
+
+.container { width:min(1180px,92%); margin:auto; }
+
+/* NAVIGATION */
+
+header {
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--border);
+}
+
+.navbar {
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo img {
+  width:64px;
+  height:64px;
+  object-fit:contain;
+}
+
+.logo h1 {
+  font-size:19px;
+  color:var(--green);
+  line-height:1.3;
+}
+
+.logo p {
+  color:var(--muted);
+  font-size:11px;
+}
+
+nav {
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+
+nav a {
+  font-size:13px;
+  font-weight:700;
+  color:#435348;
+  transition:.25s;
+}
+
+nav a:hover { color:var(--green2); }
+
+nav .nav-cta {
+  background:var(--green);
+  color:white;
+  padding:11px 20px;
+  border-radius:6px;
+}
+
+nav .nav-cta:hover {
+  background:var(--gold);
+  color:var(--dark);
+}
+
+/* HERO */
+
+.hero {
+  min-height:610px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  color:white;
+  background:
+  linear-gradient(90deg,rgba(9,38,25,.95),rgba(12,55,35,.75),rgba(12,55,35,.15)),
+  url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1900&q=85") center/cover;
+}
+
+.hero-content {
+  max-width:720px;
+  padding:100px 0;
+  animation:fadeUp .9s ease;
+}
+
+.eyebrow {
+  display:inline-block;
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-weight:800;
+  font-size:12px;
+  margin-bottom:20px;
+}
+
+.hero h2 {
+  font-size:clamp(38px,6vw,67px);
+  line-height:1.15;
+  font-weight:800;
+  margin-bottom:22px;
+}
+
+.hero h2 span { color:var(--gold); }
+
+.hero p {
+  color:#e6eee8;
+  font-size:16px;
+  max-width:610px;
+}
+
+.hero-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:32px;
+}
+
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 24px;
+  border-radius:5px;
+  font-weight:700;
+  font-size:14px;
+  transition:.25s;
+}
+
+.btn-gold {
+  background:var(--gold);
+  color:var(--dark);
+}
+
+.btn-gold:hover {
+  background:white;
+  transform:translateY(-3px);
+}
+
+.btn-border {
+  border:1px solid rgba(255,255,255,.7);
+  color:white;
+}
+
+.btn-border:hover {
+  background:white;
+  color:var(--green);
+}
+
+/* TRUST STRIP */
+
+.trust-strip {
+  background:var(--dark);
+  color:white;
+  padding:24px 0;
+}
+
+.trust-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  text-align:center;
+}
+
+.trust-item {
+  border-right:1px solid rgba(255,255,255,.15);
+}
+
+.trust-item:last-child { border:0; }
+
+.trust-item strong {
+  display:block;
+  color:var(--gold);
+  font-size:15px;
+}
+
+.trust-item span {
+  color:#d3e1d8;
+  font-size:12px;
+}
+
+/* COMMON SECTION */
+
+section { padding:90px 0; }
+
+.section-title {
+  max-width:650px;
+  margin:0 auto 48px;
+  text-align:center;
+}
+
+.section-title small {
+  color:var(--green2);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+
+.section-title h2 {
+  font-size:clamp(28px,4vw,39px);
+  color:var(--green);
+  line-height:1.3;
+  margin:10px 0;
+}
+
+.section-title p {
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* ABOUT */
+
+.about-section { background:var(--cream); }
+
+.about-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:65px;
+}
+
+.about-image {
+  position:relative;
+}
+
+.about-image img {
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.image-label {
+  position:absolute;
+  bottom:22px;
+  left:22px;
+  background:var(--gold);
+  color:var(--dark);
+  padding:16px 23px;
+  border-radius:5px;
+  font-weight:800;
+}
+
+.about-content h2 {
+  color:var(--green);
+  font-size:35px;
+  line-height:1.3;
+  margin-bottom:20px;
+}
+
+.about-content p {
+  color:#657269;
+  font-size:14px;
+  margin-bottom:15px;
+}
+
+.reg-number {
+  display:inline-block;
+  background:#E6F0E7;
+  color:var(--green);
+  padding:9px 15px;
+  font-size:12px;
+  font-weight:800;
+  border-radius:5px;
+  margin-top:10px;
+}
+
+/* SERVICES */
+
+.services-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:23px;
+}
+
+.service-card {
+  background:white;
+  border:1px solid var(--border);
+  border-radius:9px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.service-card:hover {
+  transform:translateY(-8px);
+  box-shadow:var(--shadow);
+  border-color:var(--green2);
+}
+
+.service-card img {
+  width:100%;
+  height:205px;
+  object-fit:cover;
+  display:block;
+  transition:transform .5s;
+}
+
+.service-card:hover img { transform:scale(1.04); }
+
+.service-content { padding:23px; }
+
+.service-content h3 {
+  color:var(--green);
+  font-size:18px;
+  margin-bottom:9px;
+}
+
+.service-content p {
+  color:var(--muted);
+  font-size:13px;
+}
+
+.service-link {
+  display:inline-block;
+  color:var(--green2);
+  font-size:12px;
+  font-weight:800;
+  margin-top:17px;
+}
+
+/* MISSION BANNER */
+
+.mission {
+  background:
+  linear-gradient(rgba(15,55,35,.93),rgba(15,55,35,.93)),
+  url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1500&q=80") center/cover;
+  color:white;
+  text-align:center;
+}
+
+.mission h2 {
+  font-size:clamp(28px,4vw,42px);
+  max-width:800px;
+  margin:0 auto 18px;
+}
+
+.mission p {
+  max-width:700px;
+  margin:auto;
+  color:#d8e8dc;
+  font-size:14px;
+}
+
+/* GUIDANCE */
+
+.guidance-section { background:var(--cream); }
+
+.guidance-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.guidance-card {
+  background:white;
+  padding:30px;
+  border-radius:8px;
+  border-top:4px solid var(--gold);
+  box-shadow:var(--shadow);
+}
+
+.guidance-card .icon {
+  font-size:30px;
+  margin-bottom:14px;
+}
+
+.guidance-card h3 {
+  color:var(--green);
+  font-size:17px;
+  margin-bottom:10px;
+}
+
+.guidance-card p {
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* ENQUIRY */
+
+.form-area {
+  max-width:850px;
+  margin:auto;
+  background:white;
+  border:1px solid var(--border);
+  padding:40px;
+  border-radius:10px;
+  box-shadow:var(--shadow);
+}
+
+.form-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.field {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.field.full { grid-column:1/-1; }
+
+label { font-size:13px; font-weight:700; }
+
+input,select,textarea {
+  padding:13px 14px;
+  width:100%;
+  border:1px solid #dce4dd;
+  border-radius:5px;
+  background:#fcfdfc;
+  outline:none;
+  font:inherit;
+  font-size:13px;
+}
+
+input:focus,select:focus,textarea:focus {
+  border-color:var(--green2);
+  box-shadow:0 0 0 3px rgba(38,118,76,.1);
+}
+
+textarea { min-height:110px; resize:vertical; }
+
+.submit {
+  width:100%;
+  border:0;
+  padding:15px;
+  background:var(--green);
+  color:white;
+  border-radius:5px;
+  font-size:15px;
+  font-weight:800;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.submit:hover {
+  background:var(--gold);
+  color:var(--dark);
+}
+
+.note {
+  color:var(--muted);
+  text-align:center;
+  font-size:11px;
+}
+
+/* CONTACT */
+
+.contact-section { background:var(--cream); }
+
+.contact-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.contact-card {
+  background:white;
+  padding:30px 20px;
+  text-align:center;
+  border-radius:8px;
+  box-shadow:var(--shadow);
+}
+
+.contact-card .icon {
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.contact-card h3 {
+  color:var(--green);
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+.contact-card p {
+  color:var(--muted);
+  font-size:13px;
+  overflow-wrap:anywhere;
+}
+
+/* FOOTER */
+
+footer {
+  background:#102D21;
+  color:white;
+  padding:55px 0 20px;
+}
+
+.footer-grid {
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:45px;
+  padding-bottom:35px;
+}
+
+.footer-brand h2 {
+  color:var(--gold);
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+footer h3 {
+  font-size:14px;
+  margin-bottom:15px;
+  color:var(--gold);
+}
+
+footer p, footer a {
+  font-size:12px;
+  color:#bdcec2;
+}
+
+.footer-links {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.copyright {
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.12);
+  padding-top:20px;
+  font-size:11px;
+  color:#91a99a;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp {
+  position:fixed;
+  right:23px;
+  bottom:23px;
+  width:58px;
+  height:58px;
+  background:#20BE65;
+  color:white;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:27px;
+  z-index:999;
+  box-shadow:0 5px 20px rgba(0,0,0,.2);
+  transition:.25s;
+}
+
+.whatsapp:hover { transform:scale(1.1); }
+
+/* ANIMATION */
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(25px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+  nav { gap:13px; }
+  nav a { font-size:11px; }
+  .about-grid { gap:30px; }
+  .services-grid { grid-template-columns:repeat(2,1fr); }
+}
+
+@media(max-width:650px) {
+  .navbar {
+    flex-direction:column;
+    padding:12px 0;
+  }
+
+  .logo img { width:52px; height:52px; }
+  .logo h1 { font-size:16px; }
+
+  nav {
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:13px;
+  }
+
+  .hero { min-height:550px; }
+  .hero-content { padding:75px 0; }
+  section { padding:60px 0; }
+
+  .trust-grid { gap:12px; }
+  .trust-item strong { font-size:12px; }
+  .trust-item span { font-size:10px; }
+
+  .about-grid,
+  .services-grid,
+  .guidance-grid,
+  .contact-grid,
+  .footer-grid {
+    grid-template-columns:1fr;
+  }
+
+  .about-image img { height:290px; }
+
+  .about-content h2 { font-size:28px; }
+
+  .form-area { padding:24px 17px; }
+  .form-grid { grid-template-columns:1fr; }
+  .field.full { grid-column:auto; }
+
+  .footer-grid { gap:25px; }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    animation:none!important;
+    transition:none!important;
+    scroll-behavior:auto!important;
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <header style="display:flex; align-items:center; justify-content:center; gap:15px;">
-<img src="https://image2url.com/images/1765897998310-65ed3a9c-cb07-40ed-ab7b-6e4b744ce096.jpg" alt="Animal Planet Multiservices Logo" style="max-width:90px;" />
-<div style="text-align:left;">
-<h1 style="margin:0;">Animal Planet Multiservices</h1>
-<p style="margin:5px 0 0;"><strong>सलोखा बहुउद्देशीय सेवाभावी संस्था, छत्रपती संभाजीनगर</strong></p>
-<p style="margin:5px 0 0;"><strong>Regd.:</strong> MAH/515/2020</p>
-</div>
+<header>
+  <div class="container navbar">
+
+    <a href="#home" class="logo">
+      <img src="https://image2url.com/images/1765897998310-65ed3a9c-cb07-40ed-ab7b-6e4b744ce096.jpg" alt="Animal Planet Logo">
+      <div>
+        <h1>Animal Planet Multiservices</h1>
+        <p>सलोखा बहुउद्देशीय सेवाभावी संस्था</p>
+        <p>Reg. No. MAH/515/2020</p>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#guidance">Guidance</a>
+      <a href="#contact">Contact</a>
+      <a href="#enquiry" class="nav-cta">Enquire Now</a>
+    </nav>
+
+  </div>
 </header>
-<section class="about">
-  <h2>संस्थेबद्दल / About the Trust</h2>
-  <p>
-    <strong>Animal Planet Multiservices</strong> ही नोंदणीकृत सेवाभावी संस्था असून
-    पशुसंवर्धन, दुग्ध व्यवसाय, कुक्कुटपालन, शेळी‑मेंढी पालन, मत्स्य व्यवसाय,
-    प्रशिक्षण, प्रकल्प मार्गदर्शन व शासकीय योजनांबाबत मार्गदर्शन करते.
-  </p>
-  <p>
-    शेतकरी, युवक व उद्योजकांना आधुनिक तंत्रज्ञान, प्रशिक्षण, प्रकल्प अहवाल,
-    कर्ज व मार्केटिंग मार्गदर्शन देणे हे संस्थेचे प्रमुख उद्दिष्ट आहे.
-  </p>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+
+      <span class="eyebrow">Animal Husbandry • Agriculture • Rural Development</span>
+
+      <h2>
+        Growing Together.<br>
+        <span>Building Better Futures.</span>
+      </h2>
+
+      <p>
+        शेतकरी, पशुपालक, युवक व उद्योजकांसाठी
+        आधुनिक पशुसंवर्धन, कृषीपूरक व्यवसाय,
+        तांत्रिक प्रशिक्षण आणि प्रकल्प मार्गदर्शन.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-gold">Explore Services →</a>
+        <a href="#enquiry" class="btn btn-border">Contact Our Team</a>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<section class="services">
-  <h2>आमच्या सेवा / Our Services</h2>
-  <ul>
-    <li>दुग्ध व्यवसाय प्रशिक्षण व प्रकल्प मार्गदर्शन</li>
-    <li>कुक्कुटपालन (ब्रॉयलर / लेयर / देशी)</li>
-    <li>शेळी व मेंढी पालन प्रकल्प</li>
-    <li>मत्स्य व्यवसाय व फिश फार्मिंग प्रशिक्षण</li>
-    <li>पशुवैद्यकीय व आरोग्य सल्ला</li>
-    <li>चारा, जात निवड व फार्म व्यवस्थापन</li>
-    <li>दूध, मांस, अंडी, मासे मूल्यवर्धन</li>
-    <li>NLM व राज्य शासकीय योजनांचे मार्गदर्शन</li>
-    <li>प्रकल्प अहवाल, कर्ज व मार्केटिंग सहाय्य</li>
-    <li>शेतकरी प्रशिक्षण शिबिरे व कार्यशाळा</li>
-  </ul>
+<!-- TRUST STRIP -->
+
+<div class="trust-strip">
+  <div class="container trust-grid">
+
+    <div class="trust-item">
+      <strong>Animal Husbandry</strong>
+      <span>पशुसंवर्धन विकास</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>Entrepreneurship</strong>
+      <span>ग्रामीण उद्योजकता</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>Technical Guidance</strong>
+      <span>तांत्रिक मार्गदर्शन</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- ABOUT -->
+
+<section class="about-section" id="about">
+  <div class="container about-grid">
+
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=85" alt="Agricultural landscape">
+      <div class="image-label">Sustainable Rural Development</div>
+    </div>
+
+    <div class="about-content">
+
+      <span class="eyebrow">WHO WE ARE</span>
+
+      <h2>Empowering Rural Communities Through Knowledge & Technology</h2>
+
+      <p>
+        <strong>Animal Planet Multiservices</strong> ही
+        सलोखा बहुउद्देशीय सेवाभावी संस्थेच्या उपक्रमाशी
+        संबंधित सेवा ओळख असून पशुसंवर्धन, दुग्ध व्यवसाय,
+        कुक्कुटपालन, शेळी-मेंढी पालन, मत्स्य व्यवसाय,
+        प्रशिक्षण आणि प्रकल्प मार्गदर्शन यासाठी कार्य करते.
+      </p>
+
+      <p>
+        शेतकरी, युवक व उद्योजकांना आधुनिक तंत्रज्ञान,
+        प्रशिक्षण, प्रकल्प अहवाल, बँक कर्ज आणि
+        मार्केटिंगविषयक मार्गदर्शन उपलब्ध करून देणे
+        हे आमचे प्रमुख उद्दिष्ट आहे.
+      </p>
+
+      <span class="reg-number">Registered Organization: MAH/515/2020</span>
+
+    </div>
+
+  </div>
 </section>
 
-<section class="form-section">
-  <h2>संस्थेत सहभागी व्हा / सेवा चौकशी फॉर्म<br>Join the Trust / Service Enquiry Form</h2>
-  <p>Please fill the form below if you want to join our trust or are interested in our services.</p>
+<!-- SERVICES -->
 
-  <form onsubmit="sendWhatsApp(event)">
-    <div>
-      <label>पूर्ण नाव / Full Name</label>
-      <input id="name" type="text" required />
-    </div>
-    <div>
-      <label>मोबाईल क्रमांक / Mobile Number</label>
-      <input id="mobile" type="tel" required />
-    </div>
-    <div>
-      <label>ई‑मेल पत्ता / Email Address</label>
-      <input id="email" type="email" />
-    </div>
-    <div>
-      <label>जिल्हा / शहर / District / City</label>
-      <input id="city" type="text" />
-    </div>
-    <div>
-      <label>आवड / Interest Type</label>
-      <select id="interest">
-        <option>Join the Trust</option>
-        <option>Dairy Farming</option>
-        <option>Poultry Farming</option>
-        <option>Goat / Sheep Farming</option>
-        <option>Fish Farming</option>
-        <option>Training Program</option>
-        <option>Project & Loan Guidance</option>
-      </select>
-    </div>
-    <div class="full">
-      <label>संदेश / Message</label>
-      <textarea id="message"></textarea>
-    </div>
-    <div class="full">
-      <button type="submit">WhatsApp वर पाठवा / Submit via WhatsApp</button>
-      <p style="font-size:13px; margin-top:8px;">या फॉर्मची माहिती WhatsApp वर पाठवली जाईल</p>
-    </div>
-</form>
+<section id="services">
+  <div class="container">
 
-<script>
-function sendWhatsApp(e){
-  e.preventDefault();
-  var text = `Name: ${name.value}%0AMobile: ${mobile.value}%0AEmail: ${email.value}%0ALocation: ${city.value}%0AInterest: ${interest.value}%0AMessage: ${message.value}`;
-  window.open('https://wa.me/9561599403?text=' + text, '_blank');
-}
-</script>
+    <div class="section-title">
+      <small>WHAT WE DO</small>
+      <h2>Our Services</h2>
+      <p>शेतकरी व उद्योजकांसाठी विविध सेवा आणि तांत्रिक मार्गदर्शन</p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card">
+        <img
+        src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Cow_female_black_white.jpg/960px-Cow_female_black_white.jpg"
+        alt="Dairy Farming - Black and White Cow"
+        >
+        <div class="service-content">
+          <h3>Dairy Farming</h3>
+          <p>दुग्ध व्यवसाय प्रशिक्षण, प्रकल्प अहवाल, जात निवड आणि फार्म व्यवस्थापन.</p>
+          <a href="#enquiry" class="service-link">ENQUIRE NOW →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=700&q=80" alt="Poultry farming">
+        <div class="service-content">
+          <h3>Poultry Farming</h3>
+          <p>ब्रॉयलर, लेयर व देशी कुक्कुटपालन प्रकल्प नियोजन आणि मार्गदर्शन.</p>
+          <a href="#enquiry" class="service-link">ENQUIRE NOW →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1524024973431-2ad916746881?w=700&q=80" alt="Goat farming">
+        <div class="service-content">
+          <h3>Goat & Sheep Farming</h3>
+          <p>शेळी-मेंढी पालन, जात निवड, शेड डिझाइन आणि प्रकल्प नियोजन.</p>
+          <a href="#enquiry" class="service-link">ENQUIRE NOW →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1534043464124-3be32fe000c9?w=700&q=80" alt="Fish farming">
+        <div class="service-content">
+          <h3>Fish Farming</h3>
+          <p>मत्स्य व्यवसाय, फिश फार्मिंग प्रशिक्षण आणि तांत्रिक मार्गदर्शन.</p>
+          <a href="#enquiry" class="service-link">ENQUIRE NOW →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=700&q=80" alt="Animal husbandry">
+        <div class="service-content">
+          <h3>Animal Health & Nutrition</h3>
+          <p>पशु आरोग्यविषयक मार्गदर्शन, चारा व्यवस्थापन आणि पोषण नियोजन.</p>
+          <a href="#enquiry" class="service-link">ENQUIRE NOW →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700&q=80" alt="Agriculture">
+        <div class="service-content">
+          <h3>Agriculture & Rural Development</h3>
+          <p>शाश्वत शेती, कृषीपूरक व्यवसाय आणि ग्रामीण विकास उपक्रम.</p>
+          <a href="#enquiry" class="service-link">ENQUIRE NOW →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
 </section>
+
+<!-- MISSION -->
+
+<section class="mission">
+  <div class="container">
+
+    <span class="eyebrow">OUR MISSION</span>
+
+    <h2>Creating Opportunities for Farmers, Youth & Rural Entrepreneurs</h2>
+
+    <p>
+      आधुनिक तंत्रज्ञान, योग्य प्रशिक्षण आणि शासकीय योजनांची माहिती
+      यांच्या माध्यमातून ग्रामीण भागातील आर्थिक विकासाला चालना देणे.
+    </p>
+
+  </div>
+</section>
+
+<!-- GUIDANCE -->
+
+<section class="guidance-section" id="guidance">
+  <div class="container">
+
+    <div class="section-title">
+      <small>HOW WE HELP</small>
+      <h2>Project & Financial Guidance</h2>
+      <p>व्यवसाय सुरू करण्यापासून प्रकल्प नियोजनापर्यंत मार्गदर्शन</p>
+    </div>
+
+    <div class="guidance-grid">
+
+      <div class="guidance-card">
+        <div class="icon">📑</div>
+        <h3>Project Reports (DPR)</h3>
+        <p>दुग्ध, कुक्कुट, शेळीपालन व इतर कृषीपूरक व्यवसायांसाठी प्रकल्प अहवाल तयार करण्यास मदत.</p>
+      </div>
+
+      <div class="guidance-card">
+        <div class="icon">🏦</div>
+        <h3>Bank Loan Guidance</h3>
+        <p>प्रकल्प खर्च, आर्थिक नियोजन, कर्ज प्रस्ताव आणि बँक प्रक्रियेबाबत मार्गदर्शन.</p>
+      </div>
+
+      <div class="guidance-card">
+        <div class="icon">🏛️</div>
+        <h3>Government Schemes</h3>
+        <p>NLM, CMEGP आणि इतर लागू शासकीय योजनांची पात्रता व अर्ज प्रक्रियेबाबत मार्गदर्शन.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+
+<section id="enquiry">
+  <div class="container">
+
+    <div class="section-title">
+      <small>GET IN TOUCH</small>
+      <h2>Join Us / Service Enquiry</h2>
+      <p>आपल्या व्यवसायासाठी किंवा संस्थेत सहभागी होण्यासाठी चौकशी करा.</p>
+    </div>
+
+    <div class="form-area">
+
+      <form id="enquiryForm">
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="name">Full Name / पूर्ण नाव *</label>
+            <input id="name" name="name" required maxlength="100" placeholder="Your name">
+          </div>
+
+          <div class="field">
+            <label for="mobile">Mobile Number / मोबाईल *</label>
+            <input id="mobile" name="mobile" type="tel" required maxlength="10" pattern="[6-9][0-9]{9}" inputmode="numeric" placeholder="10 digit number">
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="Your email">
+          </div>
+
+          <div class="field">
+            <label for="city">District / City</label>
+            <input id="city" name="city" placeholder="Your location">
+          </div>
+
+          <div class="field full">
+            <label for="interest">Select Your Interest *</label>
+            <select id="interest" name="interest" required>
+              <option value="">Choose a service</option>
+              <option>Join the Trust</option>
+              <option>Dairy Farming</option>
+              <option>Poultry Farming</option>
+              <option>Goat / Sheep Farming</option>
+              <option>Fish Farming</option>
+              <option>Animal Health Guidance</option>
+              <option>Agriculture & Rural Development</option>
+              <option>Government Schemes</option>
+              <option>Project & Loan Guidance</option>
+              <option>Training Program</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="message">Your Message / संदेश</label>
+            <textarea id="message" name="message" maxlength="1000" placeholder="Write your enquiry..."></textarea>
+          </div>
+
+          <div class="field full">
+            <button type="submit" class="submit">Send Enquiry via WhatsApp →</button>
+            <p class="note">तुमची माहिती WhatsApp द्वारे संस्थेला पाठवली जाईल.</p>
+          </div>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-section" id="contact">
+  <div class="container">
+
+    <div class="section-title">
+      <small>CONTACT INFORMATION</small>
+      <h2>Let's Connect</h2>
+      <p>We would be happy to hear from you.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <div class="icon">📍</div>
+        <h3>Our Address</h3>
+        <p>Shiv Sena Bhavan, Shop No. 11, Aurangpura, Chhatrapati Sambhajinagar, Maharashtra.</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">📞</div>
+        <h3>Call Us</h3>
+        <p><a href="tel:+919764999582">9764999582</a></p>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">✉️</div>
+        <h3>Email Us</h3>
+        <p><a href="mailto:salokhatrust123@gmail.com">salokhatrust123@gmail.com</a></p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
 
 <footer>
-  <p>📍 ShivSena Bhavan, Shop No. 11, Aurangpura, Chhatrapati Sambhajinagar</p>
-  <p>📞 9764999582 | ✉️ salokhatrust123@gmail.com</p>
-  <p>© Animal Planet Multiservices</p>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <h2>Animal Planet Multiservices</h2>
+        <p>सलोखा बहुउद्देशीय सेवाभावी संस्था</p>
+        <p>Reg. No. MAH/515/2020</p>
+        <br>
+        <p>Working towards sustainable agriculture, animal husbandry and rural development.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Our Services</a>
+          <a href="#guidance">Project Guidance</a>
+          <a href="#enquiry">Enquiry</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <div class="footer-links">
+          <p>Shiv Sena Bhavan, Shop No. 11</p>
+          <p>Aurangpura, Chhatrapati Sambhajinagar</p>
+          <a href="tel:+919764999582">9764999582</a>
+          <a href="mailto:salokhatrust123@gmail.com?subject=Enquiry%20-%20Animal%20Planet%20Multiservices">
+          salokhatrust123@gmail.com
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span> Animal Planet Multiservices. All Rights Reserved.
+    </div>
+
+  </div>
 </footer>
+
+<!-- FLOATING WHATSAPP -->
+
+<a class="whatsapp"
+   href="https://wa.me/919561599403"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contact us on WhatsApp">
+   ☎
+</a>
+
+<script>
+const WHATSAPP_NUMBER = "919561599403";
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+document.getElementById("enquiryForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  if (!this.reportValidity()) return;
+
+  const data = new FormData(this);
+
+  const message = [
+    "NEW ENQUIRY - ANIMAL PLANET MULTISERVICES",
+    "",
+    "Name: " + data.get("name"),
+    "Mobile: " + data.get("mobile"),
+    "Email: " + (data.get("email") || "Not provided"),
+    "Location: " + (data.get("city") || "Not provided"),
+    "Interest: " + data.get("interest"),
+    "Message: " + (data.get("message") || "Not provided")
+  ].join("\n");
+
+  const url = "https://wa.me/" + WHATSAPP_NUMBER +
+              "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank", "noopener,noreferrer");
+});
+</script>
 
 </body>
 </html>
